@@ -1,31 +1,13 @@
-import { Fragment } from "react";
+
 import { Menu, Transition } from "@headlessui/react";
 import close from "/close.svg"
-// import { Button } from 'antd';
 import Button from "../Elements/Button";
-import { useState, useRef, useEffect, useCallback } from "react";
 import MetaMask from "/MetaMask.svg";
 import reload from "/reload.svg";
-import {
-  ArrowPathIcon,
-  ChartPieIcon,
-  CursorArrowRaysIcon,
-  FingerPrintIcon,
-  SquaresPlusIcon,
-} from "@heroicons/react/24/outline";
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
-// const solutions = [
-//   {
-//     name: "Analytics",
-//     description: "Get a better under",
-//     href: "#",
-//     icon: ChartPieIcon,
-//   },
-
-
-// ];
 
 export default function WalletDrop({
   disconnect,
@@ -159,7 +141,7 @@ export default function WalletDrop({
                       ) : (
                         <Button
                           onClick={signOut}
-                          className="text-sm font-medium text-gray-100 middle none center mr-2 rounded-lg bg-blue-400 py-1 hover:bg-blue-500 px-3 font-sans uppercase hover:shadow-sm hover:shadow-blue-500/40 focus:opacity-[0.85] "
+                          className="text-sm font-semibold text-gray-100 middle none center mr-2 rounded-lg bg-blue-400 py-1.5 hover:bg-blue-500 px-3 font-sans uppercase hover:shadow-sm hover:shadow-blue-500/40 focus:opacity-[0.85] "
                           data-ripple-light="true"
                         >
                           SignOut

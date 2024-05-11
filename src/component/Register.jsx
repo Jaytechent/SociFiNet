@@ -1,20 +1,17 @@
 import React, { useState } from "react";
-import { useRef } from "react";
-// import { Button, Input } from "antd";
 import validator from "validator";
 import axios from "axios";
 import { message } from "antd";
 import { useNavigate, Link } from "react-router-dom";
 import { FlexCol, Flex } from "../Elements/Flex";
-import Header from "./Header";
 import Button from "../Elements/Button";
-import Input, { InputPassword } from "./Input";
 const Register = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     password: "",
   });
+
   const [loading, setLoading] = useState(false);
   const [messageApi, contextHolder] = message.useMessage();
   const [isPasswordValid, setIsPasswordValid] = useState(true);
@@ -76,6 +73,7 @@ const Register = () => {
       setLoading(false);
     }
   };
+  const inputclass = "block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
 
 
   return (
@@ -86,26 +84,28 @@ const Register = () => {
 
       <FlexCol className=" transition-all py-5 md:py-6 w-3/5 h-full  ">
 
-      <FlexCol as="form"  onSubmit={handleSubmit}>
-        <FlexCol className="mb-8 gap-2 transition-all md:mb-4 m-0 p-2 ">
-        <Input  onChange={handleUserInput} placeholder="Enter your name" label="Name" error_message="Please provide the name." />
-          <Input  
-           name="name" 
-           onChange={handleUserInput}
-            type="email"
-            placeholder="Email@gmail.com"
-            label="Email"
-            error_message="Please provide a valid email address."
-          />
-  
-          <InputPassword
-          name="email"
-              onChange={handleUserInput}
-            placeholder="••••••••"
-            minLength={8}
-            label="Password"
-            error_message="Password must be atleast 8 char long"
-          />
+      <FlexCol as="form"  >
+        <FlexCol className="mb-8 gap-2 transition-all md:mb-4 m-0  ">
+        <div>
+    <label  className="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Name</label>
+    <input onChange={handleUserInput}  name="name" placeholder="Name" type = "text" className={inputclass} />
+</div>
+        <div>
+    <label name="email" placeholder="Email" className="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+    <input onChange={handleUserInput}  name="email" placeholder="Email" type = "email"  className={inputclass} />
+</div>
+        <div>
+    <label name="password" placeholder="Password"  className="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Password</label>
+    <input onChange={handleUserInput}    name="password"  placeholder="Password" type="password" className={inputclass} />
+</div>
+        
+       
+   
+        {!isPasswordValid && (
+          <p style={{ color: "red" }}>
+            Password must be alphanumeric, symbols and not less than 8 char
+          </p>
+            )}
          
           {/* <Flex className="mb-4 gap-4"> */}
           <div className= "-mt-1  text-base self-start ">
