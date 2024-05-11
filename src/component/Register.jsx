@@ -77,10 +77,6 @@ const Register = () => {
     }
   };
 
-  const nameRef = useRef();
-  const emailRef = useRef();
-  const alternateEmailRef = useRef();
-  const passwordRef = useRef();
 
   return (
   <>
@@ -93,7 +89,8 @@ const Register = () => {
       <FlexCol as="form"  onSubmit={handleSubmit}>
         <FlexCol className="mb-8 gap-2 transition-all md:mb-4 m-0 p-2 ">
         <Input  onChange={handleUserInput} placeholder="Enter your name" label="Name" error_message="Please provide the name." />
-          <Input
+          <Input  
+           name="name" 
            onChange={handleUserInput}
             type="email"
             placeholder="Email@gmail.com"
@@ -102,6 +99,7 @@ const Register = () => {
           />
   
           <InputPassword
+          name="email"
               onChange={handleUserInput}
             placeholder="••••••••"
             minLength={8}
@@ -125,7 +123,7 @@ const Register = () => {
             </Link>
           </label> */}
         {/* </Flex> */}
-        <Button onClick={handleSubmit} className=" mt-2 text-base m-0 p-0">Sign Up</Button>
+        <Button onClick={handleSubmit} loading={loading} className=" mt-2 text-base m-0 p-0">Sign Up</Button>
           
      
         </FlexCol>
