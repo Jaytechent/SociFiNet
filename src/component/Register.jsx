@@ -108,7 +108,7 @@ const Register = () => {
             )}
          
           {/* <Flex className="mb-4 gap-4"> */}
-          <div className= "-mt-1  text-base self-start ">
+          <div className= "-mt-1  text-base md:text-sm self-start ">
           Already have an account? 
           </div>
          

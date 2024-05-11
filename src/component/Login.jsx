@@ -104,7 +104,7 @@ const Login = () => {
           
      
         </FlexCol>
-        <Link to="/forgot-password" className=" self-start text-sm text-blue-600 ">
+        <Link to="/forgot-password" className="-mt-7 md:-mt-3 self-start text-sm text-blue-600 ">
           Forgot Password ?
         </Link>
         <Button onClick = {handleSubmit} loading={loading} className=" mt-2 text-base m-0 p-0">Login</Button>
