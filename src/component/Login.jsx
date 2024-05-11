@@ -77,13 +77,13 @@ const Login = () => {
    
 
     <>
-
+<h2>Login</h2>
     <div className=" flex flex-shrink  aspect-auto mt-2 sm:mt-3 md:mt-5 lg:mt-7 h-1/2 max-h-80  overflow-hidden bg-white  rounded-3xl shadow-md w-auto md:flex-row md:w-fit  ">
   <section className="grid place-items-center w-full md:w-1/2 bg-white  shadow-md  ">
       <FlexCol className=" transition-all py-5 md:py-6 w-3/5 h-full  ">
 
       <FlexCol as="form" onSubmit={handleSubmit}>
-        <FlexCol className="mb-8 gap-6 transition-all md:mb-4 m-0 ">
+        <FlexCol className="mb-8 gap-6 transition-all md:mb-4 mt-3 ">
           <Input
             type="email"
             placeholder="Email@gmail.com"
