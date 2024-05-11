@@ -69,7 +69,7 @@ const Navbar = () => {
       <nav className="shadow-md p-2 md:p-4 bg-white">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
         <div className="flex items-center">
-  <div className="h-14 w-32 relative overflow-hidden rounded-full  lg:ml-4">
+  <div className="h-14 w-32 relative overflow-hidden rounded-full  lg:ml-4 ">
     <NavLink to="/">  <video className="object-cover w-full h-full" autoPlay loop muted playsInline>
       <source src="/logo-animate.mp4" type="video/mp4" />
       

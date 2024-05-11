@@ -1,8 +1,8 @@
 import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import close from "/close.svg"
-import { Button } from 'antd';
-
+// import { Button } from 'antd';
+import Button from "../Elements/Button";
 import { useState, useRef, useEffect, useCallback } from "react";
 import MetaMask from "/MetaMask.svg";
 import reload from "/reload.svg";
@@ -100,13 +100,13 @@ export default function WalletDrop({
                           />
                         </div> */}
                         <div className="ml-6 mt-2 ">
-                          <button
+                          <Button
                             onClick={disconnect}
-                            className="text-sm font-medium text-gray-100 middle none center mr-2 rounded-lg bg-blue-400 py-1.5 hover:bg-blue-500 px-3 font-sans uppercase hover:shadow-sm hover:shadow-blue-500/40 focus:opacity-[0.85] "
+                            className="text-sm font-medium font-sans uppercase  "
                             data-ripple-light="true"
                           >
                             disconnect
-                          </button>
+                          </Button>
                       
                         </div>
                       </div>
@@ -143,27 +143,27 @@ export default function WalletDrop({
                     
           type="primary"
          
-          className="rounded-lg bg-blue-400 py-1 hover:bg-blue-500 px-3 hover:shadow-sm hover:shadow-blue-500/40 focus:opacity-[0.85] border-2 "
+          className="`text-white text-base bg-blue-600 text-center  px-2 pt-1 rounded-2xl shadow-[0_8px_10px_1px_rgba(51,78,255,0.4)] duration-300 hover:translate-y-0.5 transition-all hover:shadow-[0_8px_10px_1px_rgba(51,78,255,0.6)] "
           data-ripple-light="true "
          
           // onClick={}
         > <img src={close} height={20} width={20} alt="" /></Menu.Button>
                       {!isSignedIn ? (
-                        <button
+                        <Button
                           onClick={signIn}
                           className="text-sm font-semibold text-gray-100 middle none center mr-2 rounded-lg bg-blue-400 py-1.5 hover:bg-blue-500 px-3 font-sans uppercase hover:shadow-sm hover:shadow-blue-500/40 focus:opacity-[0.85] "
                           data-ripple-light="true"
                         >
                           Sign in
-                        </button>
+                        </Button>
                       ) : (
-                        <button
+                        <Button
                           onClick={signOut}
                           className="text-sm font-medium text-gray-100 middle none center mr-2 rounded-lg bg-blue-400 py-1 hover:bg-blue-500 px-3 font-sans uppercase hover:shadow-sm hover:shadow-blue-500/40 focus:opacity-[0.85] "
                           data-ripple-light="true"
                         >
                           SignOut
-                        </button>
+                        </Button>
                       )}
                     </div>
                   </p>

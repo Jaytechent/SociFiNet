@@ -203,7 +203,7 @@ const [Darkmode, setDarkMode] = useState(false);
         </div>
         
       ) : (
-        <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mt-2 md:mt-8 xl:mt-16'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-2 md:mt-8 xl:mt-16'>
 
         
         

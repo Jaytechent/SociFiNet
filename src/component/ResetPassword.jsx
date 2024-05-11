@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Button, Input, message as antMessage } from "antd";
+import {  Input, message as antMessage } from "antd";
 import axios from "axios";
 import validator from "validator";
 import { useNavigate, useLocation } from "react-router-dom";
-
+import Button from "../Elements/Button";
 const ResetPassword = () => {
   const [formData, setFormData] = useState({
     email: "",
@@ -120,6 +120,7 @@ const ResetPassword = () => {
           </p>
         )}
         <Button
+         className=" mt-2 text-base m-0 p-0"
           block
           type="primary"
           onClick={handleResetPassword}
